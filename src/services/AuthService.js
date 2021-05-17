@@ -19,3 +19,8 @@ export const postSignIn = async ({email, password}) => {
     const response = await ApiAxios.post('/auth/signin', {email,password})
     return response.data
 }
+
+export const postRegister = async ({nome, email, password}) => {
+    const response = await ApiAxios.post('/auth/register', {nome, email, password})
+    return response.data
+}
